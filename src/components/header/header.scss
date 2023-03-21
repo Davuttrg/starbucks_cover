@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > * {
+    flex: 1;
+  }
+  &__logo {
+    img {
+      width: 100px;
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  .header-actions {
+    justify-content: end;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.2rem;
+  }
+}
