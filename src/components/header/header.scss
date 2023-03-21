@@ -13,6 +13,16 @@
   nav {
     display: flex;
     justify-content: center;
+    a {
+      color: var(--primary-color);
+      padding: 6px 20px;
+      text-decoration: none;
+      transition: border-color 0.3s ease;
+      border-bottom: 1px solid transparent;
+      &.active {
+        border-color: var(--primary-color200);
+      }
+    }
   }
   .header-actions {
     justify-content: end;

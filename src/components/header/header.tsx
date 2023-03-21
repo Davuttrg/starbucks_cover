@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { AccountButton } from "./accountButton/accountButton";
 import { Basket } from "./basket/basket";
 import "./header.scss";
@@ -10,10 +11,18 @@ export const Header = () => {
         <img src="logo.png" alt="" />
       </div>
       <nav>
-        <ul>
-          <li>Home</li>
-          <li>Menü</li>
-        </ul>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/menu"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Menu
+        </NavLink>
       </nav>
       <ul className="header-actions">
         <li>
