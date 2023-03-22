@@ -1,0 +1,14 @@
+.search-bar {
+  input {
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    width: 160px;
+    transition: all 0.3s cubic-bezier(.04,.5,.62,1.37);
+    padding: 0 8px;
+    &:focus {
+      width: 220px;
+    }
+  }
+}

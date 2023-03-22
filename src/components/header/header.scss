@@ -25,11 +25,10 @@
     }
   }
   .header-actions {
-    justify-content: end;
-  }
-  ul {
-    list-style-type: none;
     display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style-type: none;
     gap: 1.2rem;
   }
 }
