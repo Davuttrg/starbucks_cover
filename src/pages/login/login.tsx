@@ -2,8 +2,11 @@ import { useFormik } from "formik";
 import "./login.scss";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../store/hooks";
+import { authanticate } from "../../store/slices/user";
 
 export const Login = () => {
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
@@ -18,6 +21,7 @@ export const Login = () => {
         .matches(/[a-zA-Z]/, "Password can only contain Latin letters."),
     }),
     onSubmit: (values) => {
+      dispatch(authanticate(values.email));
       navigate("/");
     },
   });

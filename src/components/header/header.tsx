@@ -29,6 +29,7 @@ export const Header = () => {
       <Basket />
       <AccountButton />
       </div>
+
     </header>
   );
 };
