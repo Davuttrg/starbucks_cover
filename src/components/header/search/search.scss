@@ -1,9 +1,8 @@
 .search-bar {
   input {
     height: 38px;
-    border-radius: 6px;
-    border: none;
-    outline: none;
+    border-radius: 16px;
+    border: 1px solid var(--primary-color200);
     width: 180px;
     transition: all 0.3s cubic-bezier(0.04, 0.5, 0.62, 1.37);
     padding: 0 16px;

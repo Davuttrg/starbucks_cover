@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "./home.scss";
 export const Home = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => navigate("/login");
   return (
     <section className="home-hero">
       <div className="container">
@@ -14,7 +17,7 @@ export const Home = () => {
             <h2>Join today to earn your way to free coffe and treats </h2>
           </div>
           <div className="container__action">
-            <button>Get Start to Starbucks</button>
+            <button onClick={handleNavigate}>Get Start to Starbucks</button>
           </div>
         </div>
 
