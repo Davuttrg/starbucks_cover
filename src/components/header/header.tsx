@@ -24,17 +24,11 @@ export const Header = () => {
           Menu
         </NavLink>
       </nav>
-      <ul className="header-actions">
-        <li>
-          <Search />
-        </li>
-        <li>
-          <Basket />
-        </li>
-        <li>
-          <AccountButton />
-        </li>
-      </ul>
+      <div className="header-actions">
+      <Search />
+      <Basket />
+      <AccountButton />
+      </div>
     </header>
   );
 };
