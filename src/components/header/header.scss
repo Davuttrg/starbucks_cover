@@ -19,6 +19,7 @@
       text-decoration: none;
       transition: border-color 0.3s ease;
       border-bottom: 1px solid transparent;
+      font-weight: 600;
       &.active {
         border-color: var(--primary-color200);
       }
