@@ -1,15 +1,23 @@
+import { useEffect, useState } from "react";
 import { SingleProduct } from "../../components/menu/product/product";
-import { Products } from "../../components/menu/products/products";
+import { ProductList } from "../../components/menu/productList/productList";
+import product, { Product } from "../../services/product";
 import "./menu.scss";
 
 export const Menu = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    product.getAll().then((response) => setProducts(response));
+  }, []);
+
   return (
     <section className="menu-section">
       <div className="single-product-container">
         <SingleProduct></SingleProduct>
       </div>
       <div className="products-container">
-        <Products></Products>
+        <ProductList products={products}></ProductList>
       </div>
     </section>
   );
