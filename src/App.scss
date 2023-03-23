@@ -18,7 +18,7 @@ $max-height: 1200px;
     margin: auto;
     > .page-container {
       padding-bottom: 2rem;
-      height: calc(100% - ($header-height + $header-margin));
+      height: calc(100vh - ($header-height + $header-margin));
     }
   }
 }

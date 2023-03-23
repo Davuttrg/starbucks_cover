@@ -1,0 +1,45 @@
+.single-product {
+  display: flex;
+  gap: 2rem;
+  > * {
+    &:nth-child(1) {
+      flex: 4;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+      }
+      h3 {
+        color: var(--primary-color400);
+        letter-spacing: 1px;
+        line-height: 34px;
+      }
+      button {
+        height: 52px;
+        border-radius: 16px;
+        border: 1px solid var(--primary-color200);
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        width: 177px;
+        gap: 8px;
+        justify-content: center;
+        color: var(--primary-color);
+        transition: opacity 0.2s ease;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    &:nth-child(2) {
+      flex: 3;
+      display: flex;
+      height: 300px;
+    }
+    &:nth-child(3) {
+      flex: 2;
+    }
+  }
+}
