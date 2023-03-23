@@ -3,7 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { Product } from '../../services/product'
 
 // Define a type for the slice state
-interface BasketState {
+export interface BasketState {
     product: Product,
     amount: number,
 }
@@ -20,16 +20,16 @@ export const basketSlice = createSlice({
             basketItem.amount += 1;
             return state
         },
-        decreasePayload: (state, action: PayloadAction<string>) => {
+        decreaseAmount: (state, action: PayloadAction<string>) => {
             let basketItem = state.find((item) => item.product.id == action.payload) as BasketState;
             basketItem.amount -= 1;
             return state
         },
-        addToBasket: (state, action: PayloadAction<BasketState>) => {
-            state.push(action.payload)
+        addToBasket: (state, action: PayloadAction<Product>) => {
+            state.push({ product: action.payload, amount: 1 })
             return state
         },
-        disccardFromBasket: (state, action: PayloadAction<string>) => {
+        discardFromBasket: (state, action: PayloadAction<string>) => {
             const index = state.findIndex((item) => item.product.id == action.payload);
             state.splice(index, 1)
             return state
@@ -37,7 +37,7 @@ export const basketSlice = createSlice({
     },
 })
 
-export const { increaseAmount } = basketSlice.actions
+export const { increaseAmount, decreaseAmount, addToBasket, discardFromBasket } = basketSlice.actions
 
 
 export default basketSlice.reducer
