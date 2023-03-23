@@ -1,23 +1,24 @@
+import { Product } from "../../../services/product";
 import { ProductFeatures } from "../productFeatures/productFeatures";
 import "./product.scss";
 
-export const SingleProduct = () => {
+type SingleProductProps = {
+  product: Product;
+};
+
+export const SingleProduct = ({ product }: SingleProductProps) => {
   return (
     <div className="single-product">
       <div className="product-content">
-        <h1>Unicorn Frappe</h1>
-        <h3>
-          A lower-calorie version of the classic latte. Espresso and
-          lactose-free milk come together in perfect harmony to bring lightness
-          to your drink.
-        </h3>
+        <h1>{product.title}</h1>
+        <h3>{product.description}</h3>
         <button>
           Add to Card
           <span className="material-symbols-outlined">navigate_next</span>
         </button>
       </div>
       <div className="product-img">
-        <img src="img/product3.png" alt="" />
+        <img src={product.image} alt="" />
       </div>
       <ProductFeatures></ProductFeatures>
     </div>

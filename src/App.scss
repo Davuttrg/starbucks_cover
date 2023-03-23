@@ -1,5 +1,4 @@
 $container-padding: 2rem;
-$header-margin: 4rem;
 $header-height: 120px;
 $max-height: 1200px;
 
@@ -9,7 +8,8 @@ $max-height: 1200px;
   height: 100vh;
   header {
     height: $header-height;
-    margin-bottom: $header-margin;
+    margin-bottom: var(--header-margin);
+    flex-wrap: wrap;
   }
   main {
     width: calc(100% - (2 * $container-padding));
@@ -18,7 +18,7 @@ $max-height: 1200px;
     margin: auto;
     > .page-container {
       padding-bottom: 2rem;
-      height: calc(100vh - ($header-height + $header-margin));
+      height: calc(100vh - ($header-height + var(--header-margin)));
     }
   }
 }

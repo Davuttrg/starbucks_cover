@@ -6,18 +6,27 @@ import "./menu.scss";
 
 export const Menu = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [selectedProduct, setSelectedProduct] = useState<Product>();
 
   useEffect(() => {
-    product.getAll().then((response) => setProducts(response));
+    product.getAll().then((response) => {
+      setProducts(response);
+      setSelectedProduct(response[0]);
+    });
   }, []);
 
   return (
     <section className="menu-section">
       <div className="single-product-container">
-        <SingleProduct></SingleProduct>
+        {selectedProduct && (
+          <SingleProduct product={selectedProduct}></SingleProduct>
+        )}
       </div>
       <div className="products-container">
-        <ProductList products={products}></ProductList>
+        <ProductList
+          onClickProduct={(item) => setSelectedProduct(item)}
+          products={products}
+        ></ProductList>
       </div>
     </section>
   );

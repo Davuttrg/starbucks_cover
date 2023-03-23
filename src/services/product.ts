@@ -30,7 +30,7 @@ const products: Product[] = [
         price: 12.30,
         category: "drinks",
         description: "A lower-calorie version of the classic latte. Espresso and lactose-free milk come together in perfect harmony to bring lightness to your drink.",
-        image: "img/product1.png"
+        image: "img/products/product1.png"
     },
     {
         id: "2",
@@ -38,15 +38,15 @@ const products: Product[] = [
         price: 33.12,
         category: "drinks",
         description: "A lower-calorie version of the classic latte. Espresso and lactose-free milk come together in perfect harmony to bring lightness to your drink.",
-        image: "img/product2.png"
+        image: "img/products/product2.png"
     },
     {
         id: "3",
-        title: "Unicorn Frappe",
+        title: "Pink Frappe",
         price: 10.99,
         category: "drinks",
         description: "A lower-calorie version of the classic latte. Espresso and lactose-free milk come together in perfect harmony to bring lightness to your drink.",
-        image: "img/product3.png"
+        image: "img/products/product3.png"
     }
 ]
 

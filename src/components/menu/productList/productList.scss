@@ -1,22 +1,35 @@
 .product-list {
   background-image: url("../../../../public/img/products-bg.png");
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: round;
   > .product-cards {
     display: flex;
     justify-content: space-around;
-    transform: translateY(-34px);
-    img {
-      width: 180px;
-      height: 180px;
-      object-fit: contain;
-    }
-    .content {
-      h4 {
-        margin-top: 8px;
-        color: white;
-        text-align: center;
+    cursor: pointer;
+      .product-card {
+      padding-bottom: 20px;
+      transition: transform 0.2s ease;
+      &:hover {
+        transform: translateY(-12px);
+      }
+      &.selected {
+        > img {
+          border-color: white;
+          border-radius: 100%;
+        }
+      }
+      > img {
+        border: 1px solid transparent;
+        width: 11rem;
+        height: 11rem;
+        object-fit: contain;
+        transition: border-color 0.1s ease;
+      }
+      > .content {
+        h4 {
+          margin-top: 8px;
+          color: white;
+          text-align: center;
+        }
       }
     }
   }
